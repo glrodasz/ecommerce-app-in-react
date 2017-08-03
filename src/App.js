@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   loadFromLocalStorage() {
-    return localStorage.getItem('data');
+    return localStorage.getItem('data') || '';
   }
 
   handleSubmit = (event) => {
