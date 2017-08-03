@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
+import { Button, Container } from 'semantic-ui-react';
 
 class Child extends Component {
   render() {
-    return (
-      <div>{this.props.greetings} mundo</div>
-    );
+    return <Button primary>Button!</Button>;
   }
 }
 
