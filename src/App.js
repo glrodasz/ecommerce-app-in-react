@@ -1,53 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import List from './List';
+import Child from './Child';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { items: []};
-  }
-  componentWillMount() {
-    const items =  this.loadFromLocalStorage().split(',');
-    this.setState({ items });
-  }
+    componentWillMount() {
+      console.log("This will mount");
+    }
 
-  saveToLocalStorage(data) {
-    localStorage.setItem('data', data);
-  }
+    componentDidMount() {
+      console.log("This did mount");
+    }
 
-  loadFromLocalStorage() {
-    return localStorage.getItem('data') || '';
-  }
+    componentWillUnmount() {
+      console.log("This will unmount");
+    }
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-    const { items } = this.state;
-    const inputValue = this.refs.inputItem.value;
-    const data = items.concat(inputValue);
+    render() {
+      console.log("I am just rendering like a boss");
 
-    this.setState({ items: data });
-    this.saveToLocalStorage(data);
-  }
+      this.setState({});
 
-  render() {
-    const { items } = this.state;
-
-    return (
-      <div className="container">
-        <form className="form" onSubmit={this.handleSubmit}>
-          <div className="form-group">
-              <label className="" htmlFor="item">Item</label>
-              <input ref="inputItem" className="form-control" id="inputItem" type="text"></input>
-          </div>
-          <button className="btn btn-primary">Add</button>
-        </form>
-        {items.join(',')}
-        <List items={items} />
-      </div>
-    );
-  }
+      return (
+        <div className="">
+          <h1>I got rendered!</h1>
+          <Child greetings="Hola" />
+        </div>
+      );
+    }
 }
 
 export default App;
