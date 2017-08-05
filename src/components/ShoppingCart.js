@@ -1,8 +1,21 @@
 import React, { Component } from 'react';
 import shoppingCartImg from '../images/shopping-cart.png';
+import shoppingCartImgFull from '../images/shopping-cart-full.png';
 import './ShoppingCart.css';
 
 class ShoppingCart extends Component {
+  renderQuantity() {
+    const { quantity } = this.props;
+
+    if (quantity) {
+      return (
+        <div className="shopping-cart__quantity">
+          {quantity}
+        </div>
+      );
+    }
+  }
+
   render() {
     const { quantity } = this.props;
 
@@ -12,8 +25,12 @@ class ShoppingCart extends Component {
           <img
             alt="Shopping Cart"
             className="shopping-cart__image"
-            src={shoppingCartImg}
+            src={quantity >= 1 ? shoppingCartImgFull : shoppingCartImg}
           />
+          {quantity >= 1 ?
+            <div className="shopping-cart__quantity">
+              {quantity}
+            </div>: null}
         </figure>
         <div className="shopping-cart__list" />
       </div>

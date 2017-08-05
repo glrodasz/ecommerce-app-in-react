@@ -5,6 +5,23 @@
 .shopping-cart__icon {
   max-width: 35px;
   margin: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.shopping-cart__quantity {
+  background: #e74c3c;
+  font-size: 14px;
+  color: white;
+  font-weight: 400;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 1.5;
+  position: absolute;
+  top: -4px;
+  right: -8px;
 }
 
 .shopping-cart__image {
