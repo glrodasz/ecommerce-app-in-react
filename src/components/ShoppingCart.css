@@ -1,0 +1,12 @@
+.shopping-cart {
+  display: inline-block;
+}
+
+.shopping-cart__icon {
+  max-width: 35px;
+  margin: 0;
+}
+
+.shopping-cart__image {
+  width: 100%;
+}
