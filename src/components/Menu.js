@@ -1,14 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Menu.css';
 
-class Menu extends Component {
-  render() {
-    return(
-      <div className="menu">
-        {this.props.children}
-      </div>
-    )
-  }
-}
+const Menu = ({ children }) =>
+  <div className="menu">
+    {children}
+  </div>;
 
 export default Menu;
