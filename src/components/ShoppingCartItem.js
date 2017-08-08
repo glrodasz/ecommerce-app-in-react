@@ -7,8 +7,14 @@ const ShoppingCartItem = ({ title, image, price, quantity}) => (
       <img className="shopping-cart-item__image" alt={title} src={image} />
     </figure>
     <strong className="shopping-cart-item__title">{title}</strong>
-    <span className="shopping-cart-item__quantity">{quantity}</span>
-    <span className="shopping-cart-item__price">{price}</span>
+    <div className="shopping-cart-item__detail">
+      <strong>Cantidad</strong>
+      <p>{quantity}</p>
+    </div>
+    <span className="shopping-cart-item__detail">
+      <strong>Precio</strong>
+      <p>{price}</p>
+    </span>
   </li>
 );
 

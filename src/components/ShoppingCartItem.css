@@ -1,3 +1,22 @@
 .shopping-cart-item {
-  background: red;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shopping-cart-item__title {
+  width: calc(100% - 50px);
+}
+
+.shopping-cart-item__figure {
+  width: 50px;
+  margin: 0;
+}
+
+.shopping-cart-item__image {
+  width: 100%;
+}
+
+.shopping-cart-item__detail {
+  display: flex;
+  justify-content: space-between;
 }

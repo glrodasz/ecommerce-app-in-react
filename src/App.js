@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ShoppingCart from './components/ShoppingCart';
 import Menu from './components/Menu';
+import { Button } from 'antd';
 
 const productList = [
   {
@@ -24,7 +25,11 @@ const productList = [
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { quantity: 2 };
+    this.state = { quantity: 0 };
+  }
+
+  updateShoppintCart = () => {
+    this.setState({ quantity: this.state.quantity + 1 });
   }
 
   render() {
@@ -32,6 +37,7 @@ class App extends Component {
 
     return (
       <Menu>
+        <Button type="primary" onClick={this.updateShoppintCart}>Primary</Button>
         <ShoppingCart quantity={quantity} productList={productList} />
       </Menu>
     );

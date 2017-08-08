@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
+
+import { Badge } from 'antd';
 
 import ShoppingCartItem from './ShoppingCartItem';
 
@@ -23,22 +26,12 @@ class ShoppingCart extends Component {
     const { isProductListHidden } = this.state;
 
     return (
-      <ul className={`shopping-cart__list ${isProductListHidden ? 'is-hidden' : ''}`}>
-        {productList.map(product => <ShoppingCartItem key={product.id} {...product} />)}
-      </ul>
+      <div className={classNames("shopping-cart__details", { "is-hidden": isProductListHidden})}>
+        <ul className="shopping-cart__list">
+          {productList.map(product => <ShoppingCartItem key={product.id} {...product} />)}
+        </ul>
+      </div>
     );
-  }
-
-  renderQuantity() {
-    const { quantity } = this.props;
-
-    if (Number(quantity) >= 1) {
-      return (
-        <div className="shopping-cart__quantity">
-          {Number(quantity) >= 99 ? <span>&infin;</span> : quantity}
-        </div>
-      );
-    }
   }
 
   render() {
@@ -52,7 +45,9 @@ class ShoppingCart extends Component {
             className="shopping-cart__image"
             src={Number(quantity) >= 1 ? shoppingCartImgFull : shoppingCartImg}
           />
-          {this.renderQuantity()}
+          <div className="shopping-cart__quantity">
+            <Badge count={quantity} />
+          </div>
         </figure>
         {this.renderProductList()}
       </div>
