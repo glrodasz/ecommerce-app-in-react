@@ -1,12 +1,15 @@
+/* Reset */
 * {
   box-sizing: border-box;
 }
 
+/* Layout */
 body {
   background: #ecf0f1;
   font-family: 'Roboto', sans-serif;
 }
 
+/* Utils */
 .is-hidden {
   display: none !important;
 }

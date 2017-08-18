@@ -3,11 +3,11 @@ import classNames from 'classnames';
 
 import { Badge } from 'antd';
 
-import ShoppingCartItem from './ShoppingCartItem';
+import ShoppingCartListItem from './ShoppingCartListItem';
 
-import shoppingCartImg from '../images/shopping-cart.png';
-import shoppingCartImgFull from '../images/shopping-cart-full.png';
-import './ShoppingCart.css';
+import shoppingCartImg from '../../../images/shopping-cart.png';
+import shoppingCartImgFull from '../../../images/shopping-cart-full.png';
+import '../styles/ShoppingCart.css';
 
 class ShoppingCart extends Component {
   constructor(props) {
@@ -28,7 +28,7 @@ class ShoppingCart extends Component {
     return (
       <div className={classNames("shopping-cart__details", { "is-hidden": isProductListHidden})}>
         <ul className="shopping-cart__list">
-          {productList.map(product => <ShoppingCartItem key={product.id} {...product} />)}
+          {productList.map(product => <ShoppingCartListItem key={product.id} {...product} />)}
         </ul>
       </div>
     );

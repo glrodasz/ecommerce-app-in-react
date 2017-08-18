@@ -1,7 +1,7 @@
 import React from 'react';
-import './ShoppingCartItem.css';
+import '../styles/ShoppingCartListItem.css';
 
-const ShoppingCartItem = ({ title, image, price, quantity}) => (
+const ShoppingCartListItem = ({ title, image, price, quantity}) => (
   <li className="shopping-cart-item">
     <figure className="shopping-cart-item__figure">
       <img className="shopping-cart-item__image" alt={title} src={image} />
@@ -18,4 +18,4 @@ const ShoppingCartItem = ({ title, image, price, quantity}) => (
   </li>
 );
 
-export default ShoppingCartItem;
+export default ShoppingCartListItem;
