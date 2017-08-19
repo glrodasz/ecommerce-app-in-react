@@ -1,10 +1,10 @@
 import axios from 'axios';
-import { API_URL } from '../config';
+import config from '../config';
 
 export const list = () => {
-  return axios.get(`${API_URL}/products`);
+  return axios.get(`${config.API_URL}/products`);
 }
 
 export const create = (product) => {
-  return axios.post(`${API_URL}/products`, product);
+  return axios.post(`${config.API_URL}/products`, product);
 }
