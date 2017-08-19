@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Navbar.css';
 import Logo from './Logo';
 import ShoppingCart from '../../shopping-cart/components/ShoppingCart';
 import { Menu } from 'antd';
@@ -53,6 +52,25 @@ const Navbar = () =>
       </Menu>
       <ShoppingCart quantity="10" productList={productList} />
     </div>
+    <style jsx>{`
+        .navbar {
+          display: flex;
+          background: white;
+          width: 100%;
+          position: fixed;
+          height: 60px;
+          box-shadow: 0 0 5px rgba(0,0,0,0.2);
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 20px;
+        }
+
+        .navbar__items {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        }
+    `}</style>
   </div>;
 
 export default Navbar;
