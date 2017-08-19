@@ -15,7 +15,7 @@ const Layout = ({ children, title = 'E-commerce in React' }) =>
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/antd/2.12.6/antd.min.css"
       />
-      <style global jxs>
+      <style global>
         {globalStyles}
       </style>
     </Head>

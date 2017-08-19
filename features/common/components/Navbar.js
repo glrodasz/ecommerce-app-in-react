@@ -53,24 +53,25 @@ const Navbar = () =>
       <ShoppingCart quantity="10" productList={productList} />
     </div>
     <style jsx>{`
-        .navbar {
-          display: flex;
-          background: white;
-          width: 100%;
-          position: fixed;
-          height: 60px;
-          box-shadow: 0 0 5px rgba(0,0,0,0.2);
-          align-items: center;
-          justify-content: space-between;
-          padding: 0 20px;
-        }
+          .navbar {
+            display: flex;
+            background: white;
+            width: 100%;
+            position: fixed;
+            height: 60px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+          }
 
-        .navbar__items {
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
+          .navbar__items {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
         }
-    `}</style>
+      `
+    }</style>
   </div>;
 
 export default Navbar;
