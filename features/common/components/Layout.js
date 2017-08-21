@@ -4,7 +4,7 @@ import Navbar from '../../common/components/Navbar';
 import globalStyles from '../../../utils/globalStyles';
 
 const Layout = ({ children, title = 'E-commerce in React' }) =>
-  <div>
+  <div className="layout">
     <Head>
       <title>
         {title}
@@ -22,14 +22,14 @@ const Layout = ({ children, title = 'E-commerce in React' }) =>
     <header>
       <Navbar />
     </header>
-    <div className="container">
+    <div className="layout-container">
       {children}
     </div>
     <footer>
       {'I`m here to stay'}
     </footer>
     <style jsx>{`
-      .container {
+      .layout-container {
         padding-top: 60px;
       }
     `}</style>

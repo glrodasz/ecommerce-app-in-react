@@ -3,6 +3,7 @@ import config  from '../config';
 
 const { API_URL } = config;
 
+
 export const list = () => {
   return axios.get(`${API_URL}/products`);
 }
