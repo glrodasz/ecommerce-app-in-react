@@ -1,3 +1,3 @@
-# Ecommerce app using React
+# Ecommerce App using React
 
-This is just a exercise using Next.js and Ant Design for create an Ecommerce app.
+This is just a exercise using Next.js and Ant Design for create an Ecommerce App.
